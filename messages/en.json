@@ -1,0 +1,8 @@
+{
+    "SignInView" : {
+        "title" : "Sign In",
+        "email" : "email",
+        "password" : "password",
+        "button" : "send"
+    }
+}

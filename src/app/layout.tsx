@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
     title: "Next Assesment Template",
     description: "Sebastián Roldán Giraldo",
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default async function RootLayout({ children, } : Readonly<{ children : React.ReactNode; }>) {
+
+    const locale = await getLocale();
+    const messages = await getMessages();
+
     return (
-        <html lang="en">
+
+        <html lang={locale}>
+
             <body>
-                {children}
+                <NextIntlClientProvider messages={messages}>
+                    {children}
+                </NextIntlClientProvider>
             </body>
+
         </html>
     );
 }
