@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+html {
+    font-size: 16px; /* hace referencia a 1rem */
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $white-color;
+}
