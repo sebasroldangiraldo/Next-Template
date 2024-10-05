@@ -1,0 +1,8 @@
+{
+    "SignInView" : {
+        "title" : "Inciar Sesión",
+        "email" : "correo",
+        "password" : "contraseña",
+        "button" : "enviar"
+    }
+}
