@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.cardContainer {
+    width: 100%;
+    display: flex;
+    margin-top: 8rem;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        width: 30%;
+        height: 27rem;
+        border: 0.05rem solid $light-grey-color;
+        margin-left: 9rem;
+        box-shadow: 0.01rem 0.01rem 0.01rem $black-color;
+        font-size: 1rem;
+
+        .title {
+            text-align: center;
+        }
+    }
+}
