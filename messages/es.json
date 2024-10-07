@@ -1,8 +1,26 @@
 {
     "SignInView" : {
-        "title" : "Inciar Sesión",
-        "email" : "correo",
-        "password" : "contraseña",
-        "button" : "enviar"
+        "title" : "Iniciar Sesión",
+        "username" : "Nombre de usuario:",
+        "password" : "Contraseña:",
+        "button" : "Enviar",
+        "usernamePlaceholder" : "Ingresa tu nombre de usuario",
+        "passwordPlaceholder" : "Ingresa tu contraseña"
+    },
+
+    "Information" : {
+        "title" : "Descubre las galaxias infinitas del universo,",
+        "subtitle" : "comprando los mejores dispositivos tecnológicos. ¡Ven con nosotros y haz tu sueño realidad"
+    },
+
+    "Navbar" : {
+        "signin" : "Iniciar Sesión",
+        "signup" : "Registrarse",
+        "signout" : "Cerrar Sesión",
+        "profile" : "Perfil"
+    },
+
+    "Home" : {
+        "title" : "Nuestros prodctos son increibles. ¡Elige tantos como quieras!"
     }
 }
