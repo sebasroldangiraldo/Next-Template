@@ -11,7 +11,6 @@ interface Products {
     image: string,
 };
 
-
 const ProductsCard: React.FC<Products> = ({ id, title, price, category, image }) => {
 
     return (

@@ -8,25 +8,19 @@ import Input from "../ui/input/input";
 import Button from "../ui/button/button";
 import styles from "./sign-up-form.module.scss"
 import { AddUser} from "@/types/users";
-
-
-// se crea el componente del formulario de registro con su respectiva lógica.
+import { useTranslations } from "next-intl";
 
 const SignUpForm: React.FC = () => {
 
-    // se instancia useRouter para permitir la navegación a través de las páginas del proyecto.
+    
 
     const router = useRouter();
-
-    // se implementa el useState para definir los estados de los valores obtenidos de cada input en el formulario.
 
     const [name, setName] = useState<string>('');
     const [username, setUsername] = useState<string>('');
     const [phone, setPhone] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
-
-    // se crean las funciones que escuchan los eventos al realizar cambios en el valor de cada input en el formulario.
 
     const handleChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value);
@@ -48,17 +42,11 @@ const SignUpForm: React.FC = () => {
         setPassword(event.target.value);
     };
 
-    // se crea la función de redirección a la página de registro.
-
     const handleSignIn = () => {
         router.push('/sign-in');
     };
 
-    // se instancia el objeto con los valores requeridos para realizar la solicitud del registro.
-
-    const addUser : AddUser = { email: email, username: username, password: password, name: name, phone: phone };
-
-    // se crea las función que recopila la información ingresada en el formulario y emplea la lógica de conexión con el respectivo endpoint. 
+    const addUser : AddUser = { email: email, username: username, password: password, name: name, phone: phone }; 
 
     const handleSubmit = async (event : React.FormEvent<HTMLFormElement>): Promise<void> => {
 

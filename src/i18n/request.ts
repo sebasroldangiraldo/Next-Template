@@ -1,4 +1,3 @@
-// este archivo pertenece al servidor.
 
 import { getRequestConfig } from "next-intl/server";
 import { cookies } from "next/headers";

@@ -4,6 +4,7 @@ import ProductsCard from "@/components/product-card/product-card";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import styles from './page.module.scss'
+import { useTranslations } from "next-intl";
 
 interface Products {
     id : number,
@@ -15,6 +16,8 @@ interface Products {
 };
 
 export default function Home() {
+
+    const translate = useTranslations('Home')
 
     const [products, setProducts] = useState<Products[] | null>(null);
 
@@ -57,7 +60,7 @@ export default function Home() {
 
     return (
         <div>
-            <h3 className={styles.title}>Our productos are amazing. Choose as much as you want</h3>
+            <h3 className={styles.title}>{translate('title')}</h3>
             {products && products.length > 0 ? (
                 <div className={styles.cardsContainer}>
                     {products.map((product) => (

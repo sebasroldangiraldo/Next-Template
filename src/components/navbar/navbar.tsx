@@ -4,16 +4,16 @@ import { useRouter } from 'next/navigation';
 import Button from '../ui/button/button';
 import styles from './navbar.module.scss';
 import { signOut, useSession } from 'next-auth/react';
+import Language from '../language/language';
+import { useTranslations } from 'next-intl';
 
 const Navbar: React.FC = () => {
 
+    const translate = useTranslations('Navbar');
+
     const {data : session } = useSession();
 
-    // se instancia useRouter para permitir la navegación a través de las páginas del proyecto.
-
     const router = useRouter();
-
-    // se crean las funciones de redirección a las páginas del proyecto.
 
     const handleSignIn = () => {
         router.push('/sign-in');
@@ -45,13 +45,15 @@ const Navbar: React.FC = () => {
                 {session?.user ? (
                     
                     <div className={styles.options}>
-                        <Button type='button' className={styles.navButton} onClick={handleProfile}>Profile</Button>
-                        <Button type='button' className={styles.navButton} onClick={handleSignOut}>Sign Out</Button>
+                        <Button type='button' className={styles.navButton} onClick={handleProfile}>{translate('profile')}</Button>
+                        <Button type='button' className={styles.navButton} onClick={handleSignOut}>{translate('signout')}</Button>
+                        <Language></Language>
                     </div>
                 ) : (
                     <div className={styles.options}>
-                        <Button type='button' className={styles.navButton} onClick={handleSignIn}>Sign In</Button>
-                        <Button type='button' className={styles.navButton} onClick={handleSignUp}>Sign Up</Button>
+                        <Button type='button' className={styles.navButton} onClick={handleSignIn}>{translate('signin')}</Button>
+                        <Button type='button' className={styles.navButton} onClick={handleSignUp}>{translate('signup')}</Button>
+                        <Language></Language>
                     </div>
                 )}
             </nav>
