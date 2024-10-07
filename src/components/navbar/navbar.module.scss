@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .navbar {
+        width: 82.5%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        background-color: $white-color;
+        border-bottom: 0.07rem solid $light-grey-color;
+        
+        .title {
+            width: 30%;
+            text-align: center;
+    
+            .tittleButton {
+                font-size: 1.2rem;
+                color: $black-color;
+            }
+        }
+    
+        .options {
+            width: 70%;
+            display: flex;
+            justify-content: end;
+            gap: 3rem;
+            margin-right: 5rem;
+    
+            .navButton {
+                font-size: 1rem;
+                color: $black-color;
+                font-weight: 400;
+            }
+        }
+    }
+}

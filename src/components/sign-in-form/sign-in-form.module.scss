@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.formContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    .signInForm {
+        width: 70%;
+        height: 25rem;
+
+        .formElement {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    
+        .formButtons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+    
+            .formButton {
+                background-color: $black-color;
+                color: $white-color;
+                border-radius: 0.3rem;
+                padding: 0.5rem 0rem;
+                box-shadow: 0.05rem 0.05rem 0.1rem $black-color;
+            }
+    
+            .signUpButton {
+                text-align: left;
+            }
+        }
+    }
+}

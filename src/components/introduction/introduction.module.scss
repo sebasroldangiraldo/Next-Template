@@ -1,0 +1,23 @@
+.container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-right: 5rem;
+
+    .imageContainer {
+        width: 100%;
+
+        .image {
+            height: 15rem;
+            border-radius: 0.3rem;
+        }
+    }
+
+    .information {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
